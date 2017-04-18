@@ -5,24 +5,26 @@ import javax.annotation.PreDestroy;
 
 import dao.NotificationTypeDao.TypeDao;
 
-@NotificationTypeDao(TypeDao.JDBC)
-public class Dao implements IDao {
+@NotificationTypeDao(TypeDao.JPA)
+public class daoJPA implements IDao {
 
+	
 	@Override
 	public String appelDao() {
 		// TODO Auto-generated method stub
-		return "Bonjour je suis bien dans la DAO JDBC";
+		return "Bonjour je suis bien dans la DAO JPA";
 	}
 	
 	@PostConstruct
 	public void logApresConstruction()
 	{
-		System.out.println("apres creation dao JDBC");
+		System.out.println("apres creation dao JPA");
 	}
 
 	@PreDestroy
 	public void logAvantDestruction()
 	{
-		System.out.println("avant destruction dao JDBC");
+		System.out.println("avant destruction dao JPA");
 	}
+
 }

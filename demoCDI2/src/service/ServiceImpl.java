@@ -5,10 +5,13 @@ import javax.annotation.PreDestroy;
 import javax.inject.Inject;
 
 import dao.IDao;
+import dao.NotificationTypeDao;
+import dao.NotificationTypeDao.TypeDao;
 
 public class ServiceImpl implements IService {
 
 	@Inject
+	@NotificationTypeDao(TypeDao.JPA)
 	private IDao dao;
 	
 	@Override
