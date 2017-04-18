@@ -6,7 +6,7 @@ import javax.annotation.PreDestroy;
 import dao.NotificationTypeDao.TypeDao;
 
 @NotificationTypeDao(TypeDao.JPA)
-public class daoJPA implements IDao {
+public class DaoJPA implements IDao {
 
 	
 	@Override
